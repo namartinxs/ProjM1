@@ -2,7 +2,6 @@ const rulesContainer = document.querySelector(".rules-container");
 const buttonStart = document.querySelector(".comeca-quiz");
 const questionsContainer = document.querySelector(".questions-container");
 const answersContainer = document.querySelector(".answers-container");
-const erroContainer = document.querySelector(".erro-container");
 const questionText = document.querySelector(".questions");
 const spnQtd = document.querySelector(".spnQtd");
 const nextQuestion = document.querySelector(".next-question"); 
