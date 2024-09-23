@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,21 +8,40 @@
 </head>
 <body>
     <div class="barraSuperior"></div>
-    <img src="./Imagens/canto_superior-removebg-preview.png" alt="imagem Superior" class="top">
+    <img src="./Imagens/canto_superior-removebg-preview.png" alt="imagem Superior" class="top" id="imgSuperior">
     <div class="container">
+
+        <div class="rules-container hide">
+            <p>Regras</p>
+            <ul class="list-container">
+                <li>Você terá 15 segundos para responder cada pergunta.</li>
+                <li>Se você errar, o jogo recomeça.</li>
+            </ul>
+           
+        </div>
+
+
         <div class="questions-container hide">
+
+            <span class="spnQtd"></span>
             <span class="questions">Pergunta aqui?</span>
             <div class="answers-container">
-                <button class="answers-container">Resposta 1</button>
-                <button class="answers-container">Resposta 2</button>
-                <button class="answers-container">Resposta 3</button>
-                <button class="answers-container">Resposta 4</button>
+                
+                <button class="answer button">Resposta A</button>
+                <button class="answer button">Resposta B</button>
+                <button class="answer button">Resposta C</button>
+                <button class="answer button">Resposta D</button>
             </div>
-        </div>
+        </div> 
+
+      
+
         <div class="controls-container">
-            <button class="next-questions button hide">Próxima pergunta</button>
+            <button class="comeca-quiz">Começar Quiz</button>
+            <button class=" next-question hide">Próxima pergunta</button>
         </div>
     </div>
-<img src="./Imagens/Avengers1-removebg-preview.png" alt=" canto Inferior" class="baixo">
+    <img src="./Imagens/Avengers1-removebg-preview.png" alt=" canto Inferior" class="baixo" id="imgInferior">
+    <script src="script.js"></script>
 </body>
 </html>
