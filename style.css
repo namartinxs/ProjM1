@@ -4,6 +4,21 @@
     box-sizing: border-box;
 }
 
+body{
+    background-image: linear-gradient(
+    45deg, #fbff00 35%, rgba(255, 204, 0, 0.848) 75%
+    );
+    /* background-image: url('./Imagens/wallpepermarvel.png'); */
+    background-color: #000000;
+    color: #000000;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    font-family: "Bebas Neue", sans-serif;; 
+}
+
+
 .barraSuperior{
     height: 50px;
     list-style: none;
@@ -12,7 +27,9 @@
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #6d0303;
+    background-image: linear-gradient(
+        45deg, #ec0004,  #ff4545 10%,  #c60000 
+      );
     z-index: 0;
 }
 
@@ -46,21 +63,20 @@
     width: 180px;
     height: auto;
 }
+
 button{
     cursor: pointer;
 }
 
-body{
-    background-color:#e9b830;
-    color: #fff;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.rules-container{
+    font-size: 35px;
+    text-align: center;
 }
 
 .container{
-    background-color: #6d0303;
+    background-image: linear-gradient(
+      45deg, #ec0004,  #ff4545 10%,  #c60000 
+    );
     width: 90%;
     max-width: 800px;
 
@@ -73,6 +89,23 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+button{
+    background-image: linear-gradient(
+        45deg, #fbff00 35%, rgba(255, 204, 0, 0.848) 75%
+        );
+    margin-top : 5px;
+    border: black solid 4px;
+    padding: 5px;
+    border-radius: 5%;
+    cursor: pointer;
+    width: 100%;
+    font-family: "Bebas Neue", sans-serif;;
+    font-size: 25px;
+}
+.spnQtd {
+    font-size: 25px;
 }
 
 .hide{
@@ -88,36 +121,38 @@ body{
     list-style-image: url('Imagens/martelo-de-thor.png');
 }
 
-.list-container li{
+/* .list-container li{
     padding: 5px;
-}
+    justify-content: space-around;
+} */
 
 .questions-container h1{
     font-weight: bold;
-    color: white;
+    color: rgb(255, 255, 255);
     border-bottom: 2px solid #f0ebeb;
     margin-bottom: 30px;
     padding-bottom: 25px;
+    font-family: "Bebas Neue", sans-serif;;
+    font-size: 60px;
+    margin-top: 15px;
   }
 
 .questions{
     font-size: 16px;
-    color: #f3f2f3;
-    font-weight: 300;
+    color: #ffffff;
+    font-weight: 300px;
+    font-size: 25px;
   }
 
 .erro-list{
+    font-family: "Bebas Neue", sans-serif;;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    list-style-image: url('Imagens/martelo-de-thor.png');
+    font-size: 50px;
+    text-align: center;
+    text-decoration: none;
+    
 }
 
-.erro-list li{
-    padding: 5px;
-    margin-right: 10px;
-    margin-left: 20px;
-}
 .rules-container p{
     text-align: center;
 } 
@@ -127,22 +162,15 @@ body{
 }
 
 .correct {
-    background-color: #049b48;
+    background-color: #3cff00;
 }
   
 .incorrect {
-    background-color: #a10101;
+    background-image: linear-gradient(
+        45deg, #ec0004,  #ff4545 10%,  #c60000 
+      );
 } 
 
 .questions-container button:disabled{
     cursor: not-allowed;
 }
-
-button {
-    background-color: #e9b830;
-    color: white;
-    padding: 5px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-  }

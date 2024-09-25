@@ -108,12 +108,9 @@ function reStart(){
     questionsContainer.innerHTML = 
     `
         <ul class="erro-list">
-                <li>
-                    Você errou!
-                </li>
-                <li>
-
-                </li>
+            <h1>
+               Você errou!
+            <h2/>
         </ul>
         
         <button onclick = window.location.reload()>
@@ -123,10 +120,6 @@ function reStart(){
     `;
 
 }
-
-
-
-
 
 /*const perguntas*/
 const perguntas = [
