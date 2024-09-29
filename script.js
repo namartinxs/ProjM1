@@ -7,7 +7,10 @@ const spnQtd = document.querySelector(".spnQtd");
 const nextQuestion = document.getElementById("next-question");
 const fatherContainer = document.querySelector(".game");
 const startPlay = document.querySelector(".startPlay");
+const timerDisplay = document.getElementById("timer-display");
 
+let timer;
+let timeLeft = 10;
 
 function userName(){
     
@@ -58,7 +61,13 @@ function startGame(){
 
 function displayNextQuestion(){
     resetState()
-
+    /*mostra o timer quando estiver nas perguntas*/
+    timerDisplay.style.display = 'inline-block'
+    /*apaga o tempo e seta um novo timer*/
+    timeLeft = 10;
+    timerDisplay.textContent = `Tempo restante: ${timeLeft}s`;
+    /*chama a função*/
+    startTimer();
 
     /*contador*/
     spnQtd.innerHTML = `${indexPergunta + 1}/${perguntas.length}`;
@@ -92,7 +101,22 @@ function resetState(){
     }
     /*esconde o botao se a pergunta nao for selecionada*/
     nextQuestion.style.display = 'none';
-    /*nextQuestion.classList.add("hide");*/
+   
+    /*apaga e seta novo tempo quando muda a pergunta*/
+    clearInterval(timer);
+}
+
+function startTimer(){
+    timer = setInterval(()=> {
+        timeLeft --;
+        timerDisplay.textContent = `Tempo restante: ${timeLeft}s`
+
+        if (timeLeft === 0){
+            clearInterval(timer);
+            reStart()/*começar o jogo se o tempo acabar*/
+
+        }
+    },1000);
 }
 
 function selectAnserw(event){
@@ -136,7 +160,8 @@ function fimDoJogo(){
 }
 
 function reStart(){
-    
+    /*esconde o botão em caso de erro ou recomeço*/
+    timerDisplay.style.display = 'none'
     document.getElementById("imgSuperior").src ="./Imagens/hulk-bravo.png"
     document.getElementById("imgInferior").src ="./Imagens/hulk-soco.png"
     questionsContainer.innerHTML = 
