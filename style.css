@@ -179,6 +179,3 @@ button{
 }
 
 
-.startPlay button:disabled{
-    cursor: not-allowed;
-}
