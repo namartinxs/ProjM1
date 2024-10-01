@@ -12,6 +12,7 @@ const timerDisplay = document.getElementById("timer-display");
 let timer;
 let timeLeft = 10;
 
+
 function userName(){
     
     const startPlayP = document.getElementById("startPlayP");
@@ -127,6 +128,7 @@ function selectAnserw(event){
 
     document.querySelectorAll(".resp").forEach(button=>{
         if(button.dataset.correct){
+            clearInterval(timer);
             button.classList.add("correct");
         }else{
             button.classList.add("incorrect");
@@ -148,6 +150,8 @@ function selectAnserw(event){
 }
 
 function fimDoJogo(){
+    clearInterval(timer);
+    timerDisplay.style.display = 'none'
     questionsContainer.innerHTML =
     `
         <p>
@@ -183,6 +187,8 @@ function reStart(){
 /*chama a função do nome ao recarregar a página*/
 window.onload = function() {
     userName();
+    
+    
 }
 /*const perguntas*/
 const perguntas = [
