@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Bebas Neue", system-ui;;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(
+        45deg, #ec0004,  #ff4545 10%,  #c60000 
+      );
+}
+
+section{
+    width: 100%;
+    min-height: 100vh;
+}
+
+section div.backgroundvideo{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+}
+
+section div.backgroundvideo video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+a{
+    display: flex;
+    font-size: 100px;
+    text-decoration: none;
+    color: #000000;
+    align-items: center;
+    justify-content: center;
+}
+
+.button{
+    background-image: linear-gradient(
+        45deg, #fbff00 35%, rgba(255, 204, 0, 0.848) 75%
+    );
+    margin-top : 10px;
+    border: black solid 10px;
+    padding: 5px;
+}
