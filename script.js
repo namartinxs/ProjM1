@@ -133,7 +133,6 @@ function selectAnserw(event){
         }else{
             button.classList.add("incorrect");
             
-        
         }
         button.disabled = true;
     });
