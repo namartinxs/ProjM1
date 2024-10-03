@@ -8,6 +8,7 @@ const nextQuestion = document.getElementById("next-question");
 const fatherContainer = document.querySelector(".game");
 const startPlay = document.querySelector(".startPlay");
 const timerDisplay = document.getElementById("timer-display");
+const saudacao = document.getElementById("saudacao");
 
 let timer;
 let timeLeft = 10;
@@ -39,10 +40,12 @@ function userName(){
     
 
 function showRules(){
+    
     startPlay.classList.add("hide");
     /* mostra resgras do jogo*/
     fatherContainer.classList.remove("hide")
     rulesContainer.classList.remove("hide");
+    saudacao.style.display = 'none'
     buttonStart.style.display = 'inline-block';
     buttonStart.addEventListener("click", startGame);
     nextQuestion.addEventListener("click", displayNextQuestion);
