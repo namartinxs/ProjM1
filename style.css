@@ -176,5 +176,29 @@ button{
     margin-left: 25%;
 
 }
+.container audio {
+    margin: 0;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: flex-end;
+    
+}
+
+.container.audio {
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 1px; 
+    border-radius: 5px 5px 0 0; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    position: fixed; 
+    bottom: 10px; 
+    right: 10px; 
+    width: auto; 
+    height: auto; 
+    max-width: 90%; 
+}
+
+section.audio {
+    margin-bottom: 0%; 
+}
 
   
